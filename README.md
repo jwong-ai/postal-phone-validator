@@ -1,4 +1,4 @@
-# Postal & ZIP Validator
+# Postal & Phone Number Validator
 
 A lightweight, high-performance TypeScript utility for validating phone numbers and postal codes across different countries.
 

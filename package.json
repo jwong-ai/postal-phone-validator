@@ -4,11 +4,13 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest run"
   },
-  "dependencies": {},
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "@types/node": "^25.2.3",
+    "typescript": "^5.5.3",
+    "vitest": "^4.0.18"
   },
   "private": true
 }

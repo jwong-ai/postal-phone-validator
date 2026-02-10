@@ -1,0 +1,834 @@
+{
+  "countries": [
+	{
+	  "name": "United States",
+	  "code": "US",
+	  "flag": "🇺🇸",
+	  "phone": {
+		"pattern": "^(\\+1[-\\.\\s]?)?(\\(?\\d{3}\\)?[-\\.\\s]?)?\\d{3}[-\\.\\s]?\\d{4}$"
+	  },
+	  "postal": {
+		"pattern": "^\\b\\d{5}\\b(?:[- ]{1}\\d{4})?$"
+	  }
+	},
+	{
+	  "name": "Canada",
+	  "code": "CA",
+	  "flag": "🇨🇦",
+	  "phone": {
+		"pattern": "^((\\+1|1)?( |-)?)?(\\([2-9][0-9]{2}\\)|[2-9][0-9]{2})( |-)?([2-9][0-9]{2}( |-)?[0-9]{4})$"
+	  },
+	  "postal": {
+		"pattern": "^(?=[^DdFfIiOoQqUu\\d\\s])[A-Za-z]\\d(?=[^DdFfIiOoQqUu\\d\\s])[A-Za-z]\\s{0,1}\\d(?=[^DdFfIiOoQqUu\\d\\s])[A-Za-z]\\d$"
+	  }
+	},
+	{
+	  "name": "Mexico",
+	  "code": "MX",
+	  "phone": {
+		"pattern": "^(\\+?52)?(1|01)?\\d{10,11}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇲🇽"
+	},
+	{
+	  "name": "France",
+	  "code": "FR",
+	  "phone": {
+		"pattern": "^(\\+?33|0)[67]\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇫🇷"
+	},
+	{
+	  "name": "Iceland",
+	  "code": "IS",
+	  "phone": {
+		"pattern": "^\\+354[0-9]{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{3}$"
+	  },
+	  "flag": "🇮🇸"
+	},
+	{
+	  "name": "Italy",
+	  "code": "IT",
+	  "phone": {
+		"pattern": "^(\\+?39)?\\s?3\\d{2} ?\\d{6,7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇮🇹"
+	},
+	{
+	  "name": "Ukraine",
+	  "code": "UA",
+	  "phone": {
+		"pattern": "^(\\+?38|8)?0\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇺🇦"
+	},
+	{
+	  "name": "Estonia",
+	  "code": "EE",
+	  "phone": {
+		"pattern": "^(\\+?372)?\\s?(5|8[1-4])\\s?([0-9]\\s?){6,7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇪🇪"
+	},
+	{
+	  "name": "Austria",
+	  "code": "AT",
+	  "phone": {
+		"pattern": "^\\+43[1-9][0-9]{3,12}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇦🇹"
+	},
+	{
+	  "name": "Netherlands",
+	  "code": "NL",
+	  "phone": {
+		"pattern": "^(((\\+|00)?31\\(0\\))|((\\+|00)?31)|0)6{1}\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}\\s{0,1}[A-Za-z]{2}$"
+	  },
+	  "flag": "🇳🇱"
+	},
+	{
+	  "name": "Cyprus",
+	  "code": "CY",
+	  "phone": {
+		"pattern": "^(\\+?357?)?(9(9|6)\\d{6})$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇨🇾"
+	},
+	{
+	  "name": "Greece",
+	  "code": "GR",
+	  "phone": {
+		"pattern": "^(\\+?30|0)?6(8[5-9]|9(?![26])[0-9])\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{3}\\s{0,1}\\d{2}$"
+	  },
+	  "flag": "🇬🇷"
+	},
+	{
+	  "name": "Croatia",
+	  "code": "HR",
+	  "phone": {
+		"pattern": "^\\+385[1-9][0-9]{7,8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇭🇷"
+	},
+	{
+	  "name": "Switzerland",
+	  "code": "CH",
+	  "phone": {
+		"pattern": "^(\\+41|0)([1-9])\\d{1,9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇨🇭"
+	},
+	{
+	  "name": "Sweden",
+	  "code": "SE",
+	  "phone": {
+		"pattern": "^(\\+?46|0)[\\s\\-]?7[\\s\\-]?[02369]([\\s\\-]?\\d){7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{3}\\s*\\d{2}$"
+	  },
+	  "flag": "🇸🇪"
+	},
+	{
+	  "name": "Spain",
+	  "code": "ES",
+	  "phone": {
+		"pattern": "^(\\+?34)?[67]\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇪🇸"
+	},
+	{
+	  "name": "Slovakia",
+	  "code": "SK",
+	  "phone": {
+		"pattern": "^(\\+?421)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}\\s\\(\\d{3}\\s\\d{2}\\)$"
+	  },
+	  "flag": "🇸🇰"
+	},
+	{
+	  "name": "Slovenia",
+	  "code": "SI",
+	  "phone": {
+		"pattern": "^(\\+386\\s?|0)(\\d{1}\\s?\\d{3}\\s?\\d{2}\\s?\\d{2}|\\d{2}\\s?\\d{3}\\s?\\d{3})$"
+	  },
+	  "postal": {
+		"pattern": "^([S][I][- ]{0,1}){0,1}\\d{4}$"
+	  },
+	  "flag": "🇸🇮"
+	},
+	{
+	  "name": "Czech Republic",
+	  "code": "CZ",
+	  "phone": {
+		"pattern": "^(\\+?420)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}\\s\\(\\d{3}\\s\\d{2}\\)$"
+	  },
+	  "flag": "🇨🇿"
+	},
+	{
+	  "name": "Denmark",
+	  "code": "DK",
+	  "phone": {
+		"pattern": "^(\\+?45)?\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇩🇰"
+	},
+	{
+	  "name": "Germany",
+	  "code": "DE",
+	  "phone": {
+		"pattern": "^((\\+49|0)1)(5[0-25-9]\\d|6([23]|0\\d?)|7([0-57-9]|6\\d))\\d{7,9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇩🇪"
+	},
+	{
+	  "name": "Norway",
+	  "code": "NO",
+	  "phone": {
+		"pattern": "^(\\+?47)?[49]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇳🇴"
+	},
+	{
+	  "name": "Hungary",
+	  "code": "HU",
+	  "phone": {
+		"pattern": "^(\\+?36|06)(20|30|31|50|70)\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇭🇺"
+	},
+	{
+	  "name": "Finland",
+	  "code": "FI",
+	  "phone": {
+		"pattern": "^(\\+?358|0)\\s?(4[0-6]|50)\\s?(\\d\\s?){4,8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇫🇮"
+	},
+	{
+	  "name": "Bulgaria",
+	  "code": "BG",
+	  "phone": {
+		"pattern": "^(\\+?359|0)?8[789]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇧🇬"
+	},
+	{
+	  "name": "Belgium",
+	  "code": "BE",
+	  "phone": {
+		"pattern": "^(\\+?32|0)4\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇧🇪"
+	},
+	{
+	  "name": "Poland",
+	  "code": "PL",
+	  "phone": {
+		"pattern": "^(\\+?48)? ?([5-8]\\d|45) ?\\d{3} ?\\d{2} ?\\d{2}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{2}[- ]{0,1}\\d{3}$"
+	  },
+	  "flag": "🇵🇱"
+	},
+	{
+	  "name": "Portugal",
+	  "code": "PT",
+	  "phone": {
+		"pattern": "^(\\+?351)?9[1236]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}[- ]{0,1}\\d{3}$"
+	  },
+	  "flag": "🇵🇹"
+	},
+	{
+	  "name": "Malta",
+	  "code": "MT",
+	  "phone": {
+		"pattern": "^(\\+?356|0)?(99|79|77|21|27|22|25)[0-9]{6}$"
+	  },
+	  "postal": {
+		"pattern": "^[A-Za-z]{3}\\s{0,1}\\d{4}$"
+	  },
+	  "flag": "🇲🇹"
+	},
+	{
+	  "name": "Monaco",
+	  "code": "MC",
+	  "phone": {
+		"pattern": "^\\+377[0-9]{8,9}$"
+	  },
+	  "postal": {
+		"pattern": "^980\\d{2}$"
+	  },
+	  "flag": "🇲🇨"
+	},
+	{
+	  "name": "Morocco",
+	  "code": "MA",
+	  "phone": {
+		"pattern": "^(?:(?:\\+|00)212|0)[5-7]\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇲🇦"
+	},
+	{
+	  "name": "Latvia",
+	  "code": "LV",
+	  "phone": {
+		"pattern": "^(\\+?371)2\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^[Ll][Vv][- ]{0,1}\\d{4}$"
+	  },
+	  "flag": "🇱🇻"
+	},
+	{
+	  "name": "Lithuania",
+	  "code": "LT",
+	  "phone": {
+		"pattern": "^(\\+370|0)\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^[Ll][Tt][- ]{0,1}\\d{5}$"
+	  },
+	  "flag": "🇱🇹"
+	},
+	{
+	  "name": "Romania",
+	  "code": "RO",
+	  "phone": {
+		"pattern": "^(\\+?40|0)\\s?7\\d{2}(\\/|\\s|\\.|\\-)?\\d{3}(\\s|\\.|-)?\\d{3}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇷🇴"
+	},
+	{
+	  "name": "Luxembourg",
+	  "code": "LU",
+	  "phone": {
+		"pattern": "^(\\+352)?((6\\d1)\\d{6})$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇱🇺"
+	},
+	{
+	  "name": "United Kingdom",
+	  "code": "GB",
+	  "phone": {
+		"pattern": "^(\\+?44|0)7\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^[A-Z]{1,2}[0-9R][0-9A-Z]?\\s*[0-9][A-Z-[CIKMOV]]{2}"
+	  },
+	  "flag": "🇬🇧"
+	},
+	{
+	  "name": "Ireland",
+	  "code": "IE",
+	  "phone": {
+		"pattern": "^(\\+?353|0)8[356789]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": null,
+		"note": "No postal code system"
+	  },
+	  "flag": "🇮🇪"
+	},
+	{
+	  "name": "Australia",
+	  "code": "AU",
+	  "phone": {
+		"pattern": "^(\\+?61|0)4\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇦🇺"
+	},
+	{
+	  "name": "New Zealand",
+	  "code": "NZ",
+	  "phone": {
+		"pattern": "^(\\+?64|0)[28]\\d{7,9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇳🇿"
+	},
+	{
+	  "name": "Singapore",
+	  "code": "SG",
+	  "phone": {
+		"pattern": "^(\\+65)?[3689]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇸🇬"
+	},
+	{
+	  "name": "Malaysia",
+	  "code": "MY",
+	  "phone": {
+		"pattern": "^(\\+?60|0)1(([0145](-|\\s)?\\d{7,8})|([236-9](-|\\s)?\\d{7}))$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇲🇾"
+	},
+	{
+	  "name": "India",
+	  "code": "IN",
+	  "phone": {
+		"pattern": "^(\\+?91|0)?[6789]\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇮🇳"
+	},
+	{
+	  "name": "Indonesia",
+	  "code": "ID",
+	  "phone": {
+		"pattern": "^(\\+?62|0)8(1[123456789]|2[1238]|3[1238]|5[12356789]|7[78]|9[56789]|8[123456789])([\\s?|\\d]{5,11})$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇮🇩"
+	},
+	{
+	  "name": "United Arab Emirates",
+	  "code": "AE",
+	  "phone": {
+		"pattern": "^((\\+?971)|0)?5[024568]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": null,
+		"note": "No postal code system"
+	  },
+	  "flag": "🇦🇪"
+	},
+	{
+	  "name": "Israel",
+	  "code": "IL",
+	  "phone": {
+		"pattern": "^(\\+972|972|0)(-)?0?(([23489]{1}\\d{7})|([57]\\d{8}))$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{7}$"
+	  },
+	  "flag": "🇮🇱"
+	},
+	{
+	  "name": "Iran",
+	  "code": "IR",
+	  "phone": {
+		"pattern": "^(\\+98|0)?9\\d{9}"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}-\\d{5}$"
+	  },
+	  "flag": "🇮🇷"
+	},
+	{
+	  "name": "Ecuador",
+	  "code": "EC",
+	  "phone": {
+		"pattern": "^(\\+?593|0)([2-7]|9[2-9])\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇪🇨"
+	},
+	{
+	  "name": "Egypt",
+	  "code": "EG",
+	  "phone": {
+		"pattern": "^((\\+?20)|0)?1[0125]\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇪🇬"
+	},
+	{
+	  "name": "Oman",
+	  "code": "OM",
+	  "phone": {
+		"pattern": "^((\\+|00)968)?(9[1-9])\\d{6}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{3}$"
+	  },
+	  "flag": "🇴🇲"
+	},
+	{
+	  "name": "Qatar",
+	  "code": "QA",
+	  "phone": {
+		"pattern": "^(\\+974)?[3567]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": null,
+		"note": "No postal code system"
+	  },
+	  "flag": "🇶🇦"
+	},
+	{
+	  "name": "Cuba",
+	  "code": "CU",
+	  "phone": {
+		"pattern": "^(\\+53|0053)?5\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇨🇺"
+	},
+	{
+	  "name": "Guatemala",
+	  "code": "GT",
+	  "phone": {
+		"pattern": "^(\\+502)?[2-7]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇬🇹"
+	},
+	{
+	  "name": "Kuwait",
+	  "code": "KW",
+	  "phone": {
+		"pattern": "^(\\+?965)([569]\\d{7}|41\\d{6})$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇰🇼"
+	},
+	{
+	  "name": "Costa Rica",
+	  "code": "CR",
+	  "phone": {
+		"pattern": "^(\\+506)?[2-8]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4,5}$"
+	  },
+	  "flag": "🇨🇷"
+	},
+	{
+	  "name": "Colombia",
+	  "code": "CO",
+	  "phone": {
+		"pattern": "^(\\+?57)?3(0(0|1|2|4|5)|1\\d|2[0-4]|5(0|1))\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇨🇴"
+	},
+	{
+	  "name": "Saudi Arabia",
+	  "code": "SA",
+	  "phone": {
+		"pattern": "^(!?(\\+?966)|0)?5\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}(-{1}\\d{4})?$"
+	  },
+	  "flag": "🇸🇦"
+	},
+	{
+	  "name": "Thailand",
+	  "code": "TH",
+	  "phone": {
+		"pattern": "^(\\+66|66|0)\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇹🇭"
+	},
+	{
+	  "name": "Chile",
+	  "code": "CL",
+	  "phone": {
+		"pattern": "^(\\+?56|0)[2-9]\\d{1}\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{7}\\s\\(\\d{3}-\\d{4}\\)$"
+	  },
+	  "flag": "🇨🇱"
+	},
+	{
+	  "name": "Dominican Republic",
+	  "code": "DO",
+	  "phone": {
+		"pattern": "^(\\+?1)?8[024]9\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇩🇴"
+	},
+	{
+	  "name": "Turkey",
+	  "code": "TR",
+	  "phone": {
+		"pattern": "^(\\+?90|0)?5\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇹🇷"
+	},
+	{
+	  "name": "Bahrain",
+	  "code": "BH",
+	  "phone": {
+		"pattern": "^(\\+?973)?(3|6)\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{3,4}$"
+	  },
+	  "flag": "🇧🇭"
+	},
+	{
+	  "name": "Pakistan",
+	  "code": "PK",
+	  "phone": {
+		"pattern": "^((00|\\+)?92|0)3[0-6]\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇵🇰"
+	},
+	{
+	  "name": "Panama",
+	  "code": "PA",
+	  "phone": {
+		"pattern": "^(\\+?507)\\d{7,8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇵🇦"
+	},
+	{
+	  "name": "Philippines",
+	  "code": "PH",
+	  "phone": {
+		"pattern": "^(09|\\+639)\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇵🇭"
+	},
+	{
+	  "name": "Vietnam",
+	  "code": "VN",
+	  "phone": {
+		"pattern": "^((\\+?84)|0)((3([2-9]))|(5([25689]))|(7([0|6-9]))|(8([1-9]))|(9([0-9])))([0-9]{7})$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇻🇳"
+	},
+	{
+	  "name": "Venezuela",
+	  "code": "VE",
+	  "phone": {
+		"pattern": "^(\\+?58)?(2|4)\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}(\\s[a-zA-Z]{1})?$"
+	  },
+	  "flag": "🇻🇪"
+	},
+	{
+	  "name": "Peru",
+	  "code": "PE",
+	  "phone": {
+		"pattern": "^(\\+?51)?9\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇵🇪"
+	},
+	{
+	  "name": "Bolivia",
+	  "code": "BO",
+	  "phone": {
+		"pattern": "^(\\+?591)?(6|7)\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{4}$"
+	  },
+	  "flag": "🇧🇴"
+	},
+	{
+	  "name": "Honduras",
+	  "code": "HN",
+	  "phone": {
+		"pattern": "^(\\+?504)?[9|8|3|2]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇭🇳"
+	},
+	{
+	  "name": "Jordan",
+	  "code": "JO",
+	  "phone": {
+		"pattern": "^(\\+?962|0)?7[789]\\d{7}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇯🇴"
+	},
+	{
+	  "name": "Japan",
+	  "code": "JP",
+	  "phone": {
+		"pattern": "^(\\+81[ \\-]?(\\(0\\))?|0)[6789]0[ \\-]?\\d{4}[ \\-]?\\d{4}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{7}\\s\\(\\d{3}-\\d{4}\\)$"
+	  },
+	  "flag": "🇯🇵"
+	},
+	{
+	  "name": "China",
+	  "code": "CN",
+	  "phone": {
+		"pattern": "^((\\+|00)86)?(1[3-9]|9[28])\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{6}$"
+	  },
+	  "flag": "🇨🇳"
+	},
+	{
+	  "name": "Hong Kong",
+	  "code": "HK",
+	  "phone": {
+		"pattern": "^(\\+?852[-\\s]?)?[456789]\\d{3}[-\\s]?\\d{4}$"
+	  },
+	  "postal": {
+		"pattern": null,
+		"note": "No postal code system"
+	  },
+	  "flag": "🇭🇰"
+	},
+	{
+	  "name": "Taiwan",
+	  "code": "TW",
+	  "phone": {
+		"pattern": "^(\\+?886\\-?|0)?9\\d{8}$"
+	  },
+	  "postal": {
+		"pattern": "^\\d{5}$"
+	  },
+	  "flag": "🇹🇼"
+	},
+	{
+	  "name": "South Africa",
+	  "code": "ZA",
+	  "phone": {
+		"pattern": "^(\\+?27|0)\\d{9}$"
+	  },
+	  "postal": {
+		"pattern": null,
+		"note": "No postal code system"
+	  },
+	  "flag": "🇿🇦"
+	}
+  ]
+}

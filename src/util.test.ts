@@ -5,24 +5,6 @@ import patternsData from './countries.json';
 describe('CountryValidator', () => {
   const validator = new CountryValidator(patternsData);
 
-  describe('validatePhone', () => {
-    it('should validate US phone numbers correctly (case insensitive code)', () => {
-      expect(validator.validatePhone('us', '555-555-5555')).toBe(true);
-      expect(validator.validatePhone('US', '+1 (555) 555-5555')).toBe(true);
-      expect(validator.validatePhone('Us', '123')).toBe(false);
-    });
-
-    it('should validate FR phone numbers correctly', () => {
-      expect(validator.validatePhone('FR', '0612345678')).toBe(true);
-      expect(validator.validatePhone('FR', '0712345678')).toBe(true);
-      expect(validator.validatePhone('FR', '0112345678')).toBe(false);
-    });
-
-    it('should throw error for unknown country code', () => {
-      expect(() => validator.validatePhone('XX', '123')).toThrow('Country code "XX" not found');
-    });
-  });
-
   describe('validatePostal', () => {
     it('should validate US postal codes correctly', () => {
       expect(validator.validatePostal('US', '12345')).toBe(true);

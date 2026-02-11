@@ -6,10 +6,6 @@ export interface CountryPattern {
 	name: string;
 	code: string;
 	flag: string;  // 🇺🇸 - native emoji
-	phone: {
-		pattern: string;
-		note?: string;
-	};
 	postal: {
 		pattern: string | null;
 		note?: string;

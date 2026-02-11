@@ -6,7 +6,6 @@ import {CountryPattern, CountryPatternsData} from "./types";
 
 export class CountryValidator {
 	private patterns: Map<string, CountryPattern>;
-	private phoneRegexCache: Map<string, RegExp> = new Map();
 	private postalRegexCache: Map<string, RegExp> = new Map();
 
 	constructor(data: CountryPatternsData) {
@@ -17,31 +16,10 @@ export class CountryValidator {
 
 		// Pre-compile regex patterns for better performance
 		for (const country of data.countries) {
-			if (country.phone.pattern) {
-				this.phoneRegexCache.set(country.code.toUpperCase(), new RegExp(country.phone.pattern));
-			}
 			if (country.postal.pattern) {
 				this.postalRegexCache.set(country.code.toUpperCase(), new RegExp(country.postal.pattern));
 			}
 		}
-	}
-
-	/**
-	 * 📱 Validate a phone number for a specific country
-	 */
-	validatePhone(countryCode: string, phoneNumber: string): boolean {
-		const code = countryCode.toUpperCase();
-		const regex = this.phoneRegexCache.get(code);
-		
-		if (!this.patterns.has(code)) {
-			throw new Error(`Country code "${countryCode}" not found`);
-		}
-
-		if (!regex) {
-			return false; // Or throw if phone validation is expected for all
-		}
-
-		return regex.test(phoneNumber);
 	}
 
 	/**
